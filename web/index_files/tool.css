@@ -1,0 +1,112 @@
+.thint {
+    width: 50px;
+}
+
+.mthint {
+    width: 100px;
+}
+
+.problembox>div {
+    padding: 10px;
+    min-height: 50vh;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.problemsubbox {
+    padding-left: 10px;
+}
+
+.problemsubbox>div {
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.top-pos {
+    position: fixed;
+    right: calc(50vw - 200px);
+    z-index: 9999;
+    top: 55px;
+    overflow: auto;
+    max-height: 25vh;
+    width: 400px;
+}
+
+.right-pos {
+    position: fixed;
+    right: 0;
+    z-index: 9999;
+    top: 0;
+    overflow: auto;
+    max-height: 99vh;
+    /*scrollbar-width: 2px;*/
+}
+
+.right-pos::-webkit-scrollbar {
+    width: 2px;
+}
+
+.pink {
+    color: pink;
+}
+
+.master-b-m {
+    border-bottom: 2px solid blueviolet;
+    box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.visitor-b-m {
+    border-bottom: 2px solid green;
+    box-shadow: 8px 8px 2px 1px rgba(0, 150, 0, .2);
+}
+
+.my-b-m {
+    border-bottom: 2px solid pink;
+    box-shadow: 8px 8px 2px 1px rgba(150, 0, 0, .2);
+}
+
+.main .abox {
+    min-height: 100px;
+    padding: 5px;
+    height: 100%;
+    border-radius: 5px;
+    font-weight: 300;
+}
+
+.s-table-item{
+    padding: 5px;
+    padding-left: 10px;
+    position: relative;
+}
+.s-table-item>div{
+    border: 1px solid;
+    border-radius: 5px;
+    
+    height: 100px;
+    max-height: 100px;
+    overflow: auto;
+    word-break: break-all;
+    padding: 2px;
+    background: rgba(255,255,255,0.5);
+}
+.s-table-item>div::-webkit-scrollbar{
+    width: 1px;
+}
+.s-table-item:after{
+    content: "123";
+    font-size: 0;
+    position: absolute;
+    left: 4px;
+    width: 3px;
+    background: #fff;
+    top: 0;
+    height: 100%;
+}
+
+.hiddenchild>*{
+    display: none;
+}

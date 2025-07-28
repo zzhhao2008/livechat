@@ -1,0 +1,52 @@
+.common_list img,
+.common_list .context {
+    display: inline;
+}
+
+.common_list {
+    border-bottom: 2px solid #ff790c;
+    margin-bottom: 1px;
+    overflow: hidden;
+}
+
+.common_list i {
+    margin-right: 10px;
+    color: #ff790c;
+    overflow: hidden;
+}
+
+
+.report .row {
+    border-radius: 2px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #eff0f3;
+}
+
+.report-sub-pan {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    height: 45px;
+    padding: 2px;
+    line-height: 45px;
+    position: relative;
+    font-size: 16px;
+}
+
+.report-sub-pan .subjectname {
+    position: absolute;
+    left: 15px;
+}
+
+.report-sub-pan .subjectsco {
+    position: absolute;
+    right: 20px;
+}
+
+.report-sub-pan .subjectsco .fullsco {
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+.report-sub-pan .subjectsco .p {
+    margin-left: 5px;
+}
