@@ -6,6 +6,7 @@ if (!$_SESSION['tempname']) {
 if ($_GET['ch']):
     $_SESSION['ch'] = htmlspecialchars($_GET['ch']);
 endif;
+$hlsport = file_get_contents('https://zsvstudio.top/api/STUN-PORT/index.php?service=hls');
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -170,7 +171,7 @@ endif;
                         if (Hls.isSupported()) {
                             var video = document.getElementById('video');
                             hls = new Hls();
-                            hls.loadSource('https://hlslive.zsvstudio.top:35541/hls/<?= $_SESSION['ch'] ?>_hd720.m3u8');
+                            hls.loadSource('http://hlslive-s.zsvstudio.top:<?= $hlsport ?>/hls/<?= $_SESSION['ch'] ?>_hd720.m3u8');
                             hls.attachMedia(video);
                             hls.on(Hls.Events.MANIFEST_PARSED, function() {
                                 video.play();
@@ -178,7 +179,7 @@ endif;
                             document.getElementById("df").addEventListener("change", function() {
                                 let quality = this.value;
                                 let video = document.getElementById('video');
-                                let baseUrl = 'https://hlslive.zsvstudio.top:35541/hls/<?= $_SESSION['ch'] ?>_' + quality + '.m3u8';
+                                let baseUrl = 'http://hlslive-s.zsvstudio.top:<?= $hlsport ?>/hls/<?= $_SESSION['ch'] ?>_' + quality + '.m3u8';
                                 hls.loadSource(baseUrl);
                                 hls.attachMedia(video);
                                 hls.on(Hls.Events.MANIFEST_PARSED, function() {
@@ -219,7 +220,7 @@ endif;
 
                     // 初始化WebSocket连接
                     function initWebSocket() {
-                        const serverUrl = "ws://live.zsvstudio.top:81";
+                        const serverUrl = "ws://live.zsvstudio.top:3333";
 
                         try {
                             websocket = new WebSocket(serverUrl);
